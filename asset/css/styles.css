@@ -28,6 +28,8 @@
 .navigation {
   position: fixed;
   top: 0;
+  width: 100vw;
+  height: 100vh;
   visibility: hidden;
   z-index: 3;
 }
@@ -68,6 +70,8 @@
 
 .navigation.active {
   visibility: visible;
+  width: 100vw;
+  height: 100vh;
 }
 .navigation.active .nav-menu {
   transform: translateX(0);
@@ -117,4 +121,23 @@
 .hamburger.active .hamburger__line:nth-child(3) {
   top: 40px;
   transform: rotate(-315deg);
+}
+
+.topview {
+  width: 100%;
+}
+.topview__movie video {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (max-width: 600px) {
+  video {
+    height: 850px;
+  }
+}
+.pickup {
+  height: 500px;
+  background-color: #fff;
 }/*# sourceMappingURL=styles.css.map */
