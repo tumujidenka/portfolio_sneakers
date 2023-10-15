@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./asset/css/destyle.css">
+    <link rel="stylesheet" href="./asset/slick/slick-theme.css">
+    <link rel="stylesheet" href="./asset/slick/slick.css">
+    <script src="./asset/js/jquery-3.7.1.min.js"></script>
+    <script src="./asset/js/slick.min.js"></script>
     <link rel="stylesheet" href="./asset/css/styles.css">
     <title>Sneakers</title>
 </head>
@@ -41,9 +45,31 @@
         </div>
     </section>
     <section class="pickup" id="pickup">
-        
+        <div class="headline">
+            <h1 class="headline_text">PICKUP</h1>
+        </div>
+        <ul class="pickup__slideshow">
+            <li class="pickup__slideshow--li"><img src="./asset/media/shoes1.jpg"></li>
+            <li class="pickup__slideshow--li"><img src="./asset/media/shoes2.jpg"></li>
+            <li class="pickup__slideshow--li"><img src="./asset/media/shoes3.jpg"></li>
+            <li class="pickup__slideshow--li"><img src="./asset/media/shoes4.jpg"></li>
+            <li class="pickup__slideshow--li"><img src="./asset/media/shoes5.jpg"></li>
+            <li class="pickup__slideshow--li"><img src="./asset/media/shoes6.jpg"></li>
+            <li class="pickup__slideshow--li"><img src="./asset/media/shoes7.jpg"></li>
+            <li class="pickup__slideshow--li"><img src="./asset/media/shoes8.jpg"></li>
+            <li class="pickup__slideshow--li"><img src="./asset/media/shoes9.jpg"></li>
+        </ul>
     </section>
 
     <script src="./asset/js/main.js"></script>
+    <script>
+        $(function(){
+            $('.pickup__slideshow').slick({
+                slidesToShow:3,
+                centerMode:true,
+                centerPadding:"10%"
+            });
+        })
+    </script>
 </body>
 </html>
