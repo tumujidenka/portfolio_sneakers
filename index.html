@@ -67,7 +67,15 @@
             $('.pickup__slideshow').slick({
                 slidesToShow:3,
                 centerMode:true,
-                centerPadding:"10%"
+                centerPadding:"10%",
+                responsive:[
+                    {
+                        breakpoint:767,
+                        settings:{
+                            slidesToShow:1
+                        }
+                    }
+                ]
             });
         })
     </script>
