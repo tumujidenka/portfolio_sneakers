@@ -150,7 +150,7 @@
   }
 }
 .pickup {
-  display: none;
+  display: block;
   margin-top: 125px;
   margin-bottom: 110px;
 }
