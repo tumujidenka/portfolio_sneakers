@@ -13,7 +13,7 @@ hamburger.addEventListener('click',function(){
 });
 
 //ナビゲーション:ナビゲーションを開いているときに画面を押しても閉じる
-screen.addEventListener('click',function(){
+navigation.addEventListener('click',function(){
     screen.classList.remove('active');
     navigation.classList.remove('active');
     hamburger.classList.remove('active');
