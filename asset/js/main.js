@@ -59,7 +59,7 @@ for (const link of links) {
         // 対象の要素のページ上部からの位置を取得
         const rectTop = targetElement.getBoundingClientRect().top;
         const offsetTop = window.pageYOffset;
-        const target = rectTop + offsetTop - 80;    
+        const target = rectTop + offsetTop - 90;    
         // スムーススクロールの実行
         window.scrollTo({
             top: target,       // スクロール位置
