@@ -10,6 +10,7 @@
   align-items: center;
   justify-content: space-between;
   transition: all 0.3s;
+  position: relative;
 }
 .header__inner .logo {
   display: flex;
@@ -20,7 +21,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 2;
+  z-index: 1;
   display: block;
   height: 100vh;
   width: 100vw;
@@ -34,7 +35,7 @@
   width: 100vw;
   height: 100vh;
   visibility: hidden;
-  z-index: 3;
+  z-index: 1;
 }
 .navigation .nav-menu {
   position: fixed;
@@ -97,7 +98,7 @@
   }
 }
 .hamburger {
-  z-index: 3;
+  z-index: 5;
   height: 80px;
   width: 30px;
   position: relative;
@@ -213,7 +214,6 @@
     grid-template-rows: repeat(5, auto);
     -moz-column-gap: 25px;
          column-gap: 25px;
-    row-gap: 20px;
   }
   .contents {
     max-height: none;
@@ -229,13 +229,88 @@
     grid-template-rows: repeat(9, auto);
     -moz-column-gap: 25px;
          column-gap: 25px;
-    row-gap: 20px;
   }
   .contents {
     max-height: none;
   }
   .contents__figure img {
     max-width: 100%;
+    width: 100%;
+  }
+}
+.contact {
+  background-color: #000;
+  color: #fff;
+  padding: 65px 15px 0;
+  font-size: 14px;
+}
+
+.inquiry {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto 40px;
+}
+.inquiry__description {
+  width: 50%;
+  padding-right: 6%;
+}
+.inquiry__description p {
+  margin-bottom: 40px;
+  line-height: 1.5rem;
+}
+
+.form {
+  width: 50%;
+  padding-left: 6%;
+}
+.form input, .form textarea {
+  background-color: #fff;
+  line-height: 20px;
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 25px;
+  color: #000;
+}
+.form input:focus, .form textarea:focus {
+  outline: none;
+}
+.form dt {
+  margin-bottom: 3px;
+}
+.form__button input {
+  background-color: #000;
+  border: 1px solid #fff;
+  color: #fff;
+  width: 200px;
+  text-align: center;
+}
+.form__button input:hover {
+  background-color: #FFF;
+  color: #000;
+}
+
+.copyright {
+  padding-bottom: 20px;
+}
+.copyright p {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 12px;
+}
+
+@media (max-width: 600px) {
+  .inquiry {
+    flex-direction: column;
+  }
+  .inquiry__description {
+    width: 100%;
+    padding-right: 0;
+  }
+  .form {
+    width: 100%;
+    padding-left: 0;
+  }
+  .form__button input {
     width: 100%;
   }
 }/*# sourceMappingURL=styles.css.map */
