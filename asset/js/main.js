@@ -5,6 +5,12 @@ var screen = document.querySelector('.screen');
 var navigation = document.querySelector('.navigation');
 var images = document.querySelectorAll('.contents__figure>img')//9つのimg要素を取得
 
+var links = document.querySelectorAll('.nav-menu__list>li>a');
+var pickup = document.getElementById('pickup');
+var feature = document.getElementById('feature');
+var contact = document.getElementById('contact');
+
+
 //ナビゲーション：ハンバーガーメニューをクリックしたらナビゲーションを表示する。
 hamburger.addEventListener('click',function(){
     screen.classList.toggle('active');
@@ -20,8 +26,6 @@ navigation.addEventListener('click',function(){
 });
 
 //feature:各コンテンツの画像が表示領域に20%入ると少し下からふわっと表示させる。
-console.log(images);
-
 // スクロール時のイベント
 window.addEventListener('scroll', function() {
     images.forEach(img => {
@@ -38,3 +42,28 @@ window.addEventListener('scroll', function() {
         }
     });
 });
+
+//navigation:スムーススクロール
+for (const link of links) {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        // クリックされたリンクのhref値（アンカーのID）を取得
+        const href = this.getAttribute('href');
+        // アンカーの要素を取得
+        const targetElement = document.querySelector(href);
+        console.log(targetElement);
+
+        if (!targetElement) return;  // 対象の要素がない場合はスクロールしない
+
+        // 対象の要素のページ上部からの位置を取得
+        const rectTop = targetElement.getBoundingClientRect().top;
+        const offsetTop = window.pageYOffset;
+        const target = rectTop + offsetTop - 80;    
+        // スムーススクロールの実行
+        window.scrollTo({
+            top: target,       // スクロール位置
+            behavior: 'smooth' // スムーススクロールを指定 
+        });   
+    })
+}

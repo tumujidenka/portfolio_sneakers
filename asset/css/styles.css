@@ -214,7 +214,6 @@
     grid-template-rows: repeat(5, auto);
     -moz-column-gap: 25px;
          column-gap: 25px;
-    row-gap: 20px;
   }
   .contents {
     max-height: none;
@@ -230,7 +229,6 @@
     grid-template-rows: repeat(9, auto);
     -moz-column-gap: 25px;
          column-gap: 25px;
-    row-gap: 20px;
   }
   .contents {
     max-height: none;
@@ -285,6 +283,10 @@
   color: #fff;
   width: 200px;
   text-align: center;
+}
+.form__button input:hover {
+  background-color: #FFF;
+  color: #000;
 }
 
 .copyright {

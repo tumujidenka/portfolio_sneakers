@@ -10,7 +10,9 @@
     <script src="./asset/js/jquery-3.7.1.min.js"></script>
     <script src="./asset/js/slick.min.js"></script>
     <link rel="stylesheet" href="./asset/css/styles.css">
+
     <title>Sneakers</title>
+    <link rel="icon" href="./asset/media/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header class="header">
@@ -168,15 +170,15 @@
                 <dl>
                     <div class="form__name">
                         <dt><label for="name">Name:</label></dt>
-                        <dd><input type="text" id="name" name="name"></dd>
+                        <dd><input type="text" id="name" name="name" autocomplete="name"></dd>
                     </div>
                     <div class="form__mail">
                         <dt><label for="mail">Mail:</label></dt>
-                        <dd><input type="email" id="mail" name="mail"></dd>
+                        <dd><input type="email" id="mail" name="mail" autocomplete="mail"></dd>
                     </div>
                     <div class="form__message">
                         <dt><label for="message">Message:</label></dt>
-                        <dd><textarea id="message" name="message" rows="3"></textarea></dd>
+                        <dd><textarea id="message" name="message" rows="3" autocomplete="message"></textarea></dd>
                     </div>
                     <div class="form__button">
                         <input class="button" type="submit" value="SEND">
