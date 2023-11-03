@@ -1,0 +1,18 @@
+.pickup{
+    display: block;//temp
+    margin-top:125px;
+    margin-bottom:110px;
+    &__slideshow{
+        display: flex;
+        height: 100%;
+        &--li[class]{
+            height: 100%;
+            display: flex;
+            justify-content: center;    
+            img{
+                width:90%;
+                height: 100%;
+            }
+        }
+    }
+}

@@ -214,6 +214,7 @@
     grid-template-rows: repeat(5, auto);
     -moz-column-gap: 25px;
          column-gap: 25px;
+    row-gap: 20px;
   }
   .contents {
     max-height: none;
@@ -229,6 +230,7 @@
     grid-template-rows: repeat(9, auto);
     -moz-column-gap: 25px;
          column-gap: 25px;
+    row-gap: 20px;
   }
   .contents {
     max-height: none;
@@ -277,24 +279,24 @@
 .form dt {
   margin-bottom: 3px;
 }
-.form__button input {
+.form dl > .button {
   background-color: #000;
   border: 1px solid #fff;
   color: #fff;
   width: 200px;
   text-align: center;
 }
-.form__button input:hover {
+.form dl > .button:hover {
   background-color: #FFF;
   color: #000;
 }
 
 .copyright {
   padding-bottom: 20px;
-}
-.copyright p {
-  margin: 0 auto;
   text-align: center;
+}
+.copyright small {
+  margin: 0 auto;
   font-size: 12px;
 }
 
@@ -310,7 +312,7 @@
     width: 100%;
     padding-left: 0;
   }
-  .form__button input {
+  .form dl > .button {
     width: 100%;
   }
 }/*# sourceMappingURL=styles.css.map */

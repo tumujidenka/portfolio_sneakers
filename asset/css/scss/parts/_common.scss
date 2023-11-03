@@ -1,0 +1,107 @@
+//ヘッダー,フッター,ナビゲーション,ヘッドライン
+
+$edgeMargin_L:45px;
+$edgeMargin_M:20px;
+
+
+.header{
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1;
+    &__inner{
+        margin:0 $edgeMargin_L 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition:all .3s;
+        position: relative;
+        .logo{
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+.screen.active{
+    position:absolute;
+    top:0;
+    right:0;
+    z-index: 1;
+    display:block;
+    height:100vh;
+    width: 100vw;
+    background-color: black;
+    opacity:0.7;
+}
+.navigation{
+    position:fixed;
+    top:0;
+    width: 100vw;
+    height: 100vh;
+    visibility: hidden;
+    z-index: 1;
+    .nav-menu{
+        position:fixed;
+        top:0;
+        transform: translateX(-200px);
+        opacity:0;
+        transition:transform .5s, opacity .5s;
+        width: 300px;
+        height: 100vh;
+        background-color: rgb(0,0,0);
+        color:#fff;
+        
+        &__list{
+            margin-top: 60px;
+            margin-bottom: 70px;
+            margin-left: 25px;
+            li{
+                margin-right: 25px;
+                border-top:1px solid #fff;
+                a{
+                    line-height: 65px;
+                }
+            }
+            li:last-child{
+                border-bottom: 1px solid #fff;
+            }
+            
+        }
+        &__sns-link{
+            margin-left: 25px;
+            display: flex;
+            flex-direction: column;
+            a{
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+.navigation.active{
+    visibility: visible;
+    width: 100vw;
+    height: 100vh;
+
+    .nav-menu{
+        transform: translateX(0);
+        opacity:1;
+        transition:transform .5s, opacity .5s;
+    }
+}
+
+
+.headline{
+    margin-bottom: 45px;
+    h1{
+        text-align: center;
+        font-size: 36px;
+        font-weight: bold;
+    }
+}
+
+@media (max-width:600px) {
+    .header__inner{
+        margin:0 $edgeMargin_M 0;
+    }
+}

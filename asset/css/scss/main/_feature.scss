@@ -1,0 +1,80 @@
+.feature{
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding:0 15px 60px;
+    &__grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        column-gap: 30px;
+        row-gap: 20px;
+    }
+}
+
+.contents{
+    display: flex;
+    flex-direction: column;
+    max-height: 450px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5) ;
+    &__figure{
+        img{
+            max-width: 100%;
+            opacity:0;//初期状態は透明度100%
+            transform:translateY(30px);
+            transition: opacity 0.5s, transform 0.5s;
+        }
+        img.active{//画面に20%以上入った際のCSS
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    &__description{
+        padding:35px 30px;
+        p:nth-child(2){
+            margin: 25px 0 30px;
+        }
+    }
+}
+
+@media (max-width:983px) {
+    .feature{
+        &__grid{
+            grid-template-columns: repeat(2,auto) ;
+            grid-template-rows: repeat(5,auto);
+            column-gap: 25px;
+            row-gap: 20px;
+        }
+    }
+    .contents{
+        max-height: none;
+        &__figure{
+            img{
+                max-width: 100%;
+                width:100%;
+            }
+        }
+    }
+}
+
+@media (max-width:657px) {
+    .feature{
+        &__grid{
+            grid-template-columns: repeat(1,auto) ;
+            grid-template-rows: repeat(9,auto);
+            column-gap: 25px;
+            row-gap: 20px;
+        }
+    }
+    .contents{
+        max-height: none;
+        &__figure{
+            img{
+                max-width: 100%;
+                width:100%;
+            }
+        }
+    }
+}
